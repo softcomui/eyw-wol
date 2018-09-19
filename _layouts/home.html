@@ -6,10 +6,19 @@ layout: default
     <ul class="none m-0 is-testimonies">
     {% assign documents = paginator.posts | sort: 'date' | reverse %}
     {% for item in documents %}        
-        <li>
+        <li class="testimony-post">
             {{ item.testimony }}
-            <div class="co-faint-gray nanotext pt-1h suffix">
-                {{ item.name }}
+            <div class="pt-1h d-flx al-i-c">
+                <a href="{{ item.testimony-link }}">
+                {% if item.social-media == 'facebook' %}
+                    {% include icons.html icon="facebook" %}
+                {% elsif item.social-media == 'instagram' %}
+                    {% include icons.html icon="instagram" %}
+                {% elsif item.social-media == 'twitter' %}
+                    {% include icons.html icon="twitter" %}
+                {% endif %}
+                </a>
+                <p class="co-faint-gray nanotext suffix">{{ item.name }}</p>
             </div>
         </li>
     {% endfor %}
