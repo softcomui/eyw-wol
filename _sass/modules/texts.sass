@@ -13,12 +13,8 @@
 .text-shadow-light
     text-shadow:        0 1px 2px rgba( 0, 0, 0, 0.3 )
     
-.lh-1-1h
-    line-height:        1.15
-.lh-1-2h
-    line-height:        1.25
-.lh-1-3h
-    line-height:        1.35
+.default-lh
+    line-height:        $defaultlh
 
 .lead
     font-size:          1.275rem
@@ -58,8 +54,10 @@
     font-size:          $smallfont
 .mediumtext
     font-size:          $mediumfont
-.largetext
     @media #{ $slaptop }
+        font-size:      $largefont
+.largetext
+    @media #{ $largeup }
         font-size:      2.32rem
 
 
@@ -73,7 +71,7 @@ h1, h2, h3, h4, .h1, .h2, .h3, .h4
 h1, .h1
     font-size:          1.75rem
     @media #{ $smallup }
-        font-size:      1.95rem
+        font-size:      2.00rem
 h2, .h2
     font-size:          1.65rem
     @media #{ $smallup }
@@ -89,6 +87,8 @@ h4, .h4
 // Fonts
 .fw-bold
     font-weight:        $bold
+.fw-medium
+    font-weight:        $medium
 .fw-normal
     font-weight:        $normal
 .ff-body

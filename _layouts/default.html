@@ -1,22 +1,36 @@
 <!doctype html>
 <html lang="en">
     {% include shell/head.html %}
-    <body {% if page.layout %}class="is-{{ page.layout }}"{% endif %}>
+    <body class="bg-platinum">
         <a class="skip-link sr" href="#mainContent">
             Skip to main content
         </a>
         <h1 class="sr">
             {{ site.title }}
         </h1>
-        <header class="main-header {% if page.layout == 'home' %}fullheight-header{% endif %}">
-            {% include shell/logobar.html %}
-            {% include shell/header.html %}
-            {% include shell/mainnav.html %}
-        </header>
-        <main class="main {% if page.layout == 'home' or 'blog' %}bg-platinum{% endif %}" id="mainContent">
+        <main class="is-main wrapper will-grow negate-bottom maxwidth-xl mx-auto">
+            <section class="is-main-content">
+                <a href="{{ site.title }}">
+                    {% include icons.html icon="logo" %}
+                </a>
+                <div class="content-area">
+                    <div class="py-1 svg-animation">
+                        {% include icons.html icon="love-group" %}
+                    </div>
+                    <h1 class="mb-1 maxwidth-500 mediumtext">We’re not ones to brag, but as it turns out, people love <span class="co-primary">eyowo</span></h1>
+                    <p class="nanotext">Providing an easier way for people to send and receive money with just their phone number has been a great honour. Here are some of the glowing things people have said about eyowo.</p>
+                </div>
+                <div class="mb-1h">
+                    <p class="nanotext mb-h ml-1h">Got here by chance?</p>
+                    <a class="d-flx al-i-c is-about-eyw bg-white co-rich-black" href="#about-eyw" uk-toggle>
+                        <span>{% include icons.html icon="logo-alt" %}</span>
+                        What is eyowo?
+                    </a>
+                </div>
+            </section>
             {{ content }}
         </main>
-        {% include shell/footer.html %}
-        {% include shell/foot.html %}
+        
+    {% include shell/foot.html %}
     </body>
 </html>

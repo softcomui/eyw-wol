@@ -9,4 +9,5 @@ group :jekyll_plugins do
   gem 'jekyll-sitemap', '~> 1.2'
   gem 'jekyll-seo-tag'
   gem 'jekyll-tagging'
+  gem 'jekyll-paginate-v2', '1.9.0'
 end

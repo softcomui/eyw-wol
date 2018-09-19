@@ -1,6 +1,22 @@
 ---
 layout: default
 ---
-{% include home/success-stories.html %}
-{% include home/blogs-reel.html %}
-{% include home/products-banner.html %}
+
+<section class="section-with-overflow p-0 is-main-content testimonies">
+    <ul class="none m-0 is-testimonies">
+    {% assign documents = paginator.posts | sort: 'date' | reverse %}
+    {% for item in documents %}        
+        <li>
+            {{ item.testimony }}
+            <div class="co-faint-gray nanotext pt-1h suffix">
+                {{ item.name }}
+            </div>
+        </li>
+    {% endfor %}
+    </ul>
+</section>
+
+<!-- Modal Content for About Eyowo -->
+{%- include components/about-eyw.html -%}
+
+

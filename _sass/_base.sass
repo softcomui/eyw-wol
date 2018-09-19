@@ -17,16 +17,14 @@ body
     line-height:            $defaultlh
     display:                flex
     flex-direction:         column
-    height:                 100vh
+    height:                 100%
     main
         flex:               1
 
 p
     margin:                 0
-    margin-bottom:          $basefont
-    font-size:              $smallfont
-    &:last-of-type:not(:only-of-type)
-        margin-bottom:      0
+    font-size:              $microfont
+    color:                  $readablegray
 
 a, .as-link
     text-decoration:        none
@@ -52,3 +50,7 @@ ul.none
 button
     border:                 none
     cursor:                 pointer
+
+iframe, blockquote
+    border:                 none
+    width:                  100%
