@@ -17,19 +17,57 @@
                     <div class="py-1 svg-animation">
                         {% include icons.html icon="love-group" %}
                     </div>
-                    <h1 class="mb-1 maxwidth-500 mediumtext">We’re not ones to brag, but as it turns out, people love <span class="co-primary">eyowo</span></h1>
+                    <h1 class="mb-1 maxwidth-500">We’re not ones to brag, but as it turns out, people love <span class="co-primary">eyowo</span></h1>
                     <p class="nanotext">Providing an easier way for people to send and receive money with just their phone number has been a great honour. Here are some of the glowing things people have said about eyowo.</p>
                 </div>
-                <div class="mb-1h">
+                <div class="mb-3">
                     <p class="nanotext mb-h ml-1h">Got here by chance?</p>
                     <a class="d-flx al-i-c is-about-eyw bg-white co-rich-black" href="#about-eyw" uk-toggle>
                         <span>{% include icons.html icon="logo-alt" %}</span>
                         What is eyowo?
                     </a>
                 </div>
+
+                <footer class="al-i-c border-top py-1 site-footer-largeup">
+                    <p class="picotext co-faint-gray pl-1h">Eyowo 2018. All Rights Reserved.</p>
+                    <div>
+                        <a href="{{ site.title }}" class="pl-1">
+                            {% include icons.html icon="footer-twitter" %}
+                        </a>
+                        <a href="{{ site.title }}" class="pl-1">
+                            {% include icons.html icon="footer-facebook" %}
+                        </a>
+                        <a href="{{ site.title }}" class="pl-1">
+                            {% include icons.html icon="footer-instagram" %}
+                        </a>
+                        <a href="{{ site.title }}" class="pl-1">
+                            {% include icons.html icon="footer-youtube" %}
+                    </a>
+                    </div>
+                </footer>
             </section>
             {{ content }}
         </main>
+
+        <footer class="border-top hide-largeup wrapper mt-2">
+            <div class="maxwidth-sm width-sm mx-auto al-i-c d-flx">
+                <p class="picotext co-faint-gray pl-1h">Eyowo 2018. All Rights Reserved.</p>
+                <div>
+                    <a href="{{ site.title }}" class="pl-1">
+                        {% include icons.html icon="footer-twitter" %}
+                    </a>
+                    <a href="{{ site.title }}" class="pl-1">
+                        {% include icons.html icon="footer-facebook" %}
+                    </a>
+                    <a href="{{ site.title }}" class="pl-1">
+                        {% include icons.html icon="footer-instagram" %}
+                    </a>
+                    <a href="{{ site.title }}" class="pl-1">
+                        {% include icons.html icon="footer-youtube" %}
+                </a>
+                </div>
+            </div>
+        </footer>
         
     {% include shell/foot.html %}
     </body>

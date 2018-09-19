@@ -4,19 +4,11 @@
     // @package sfc
     // @author  Kabolobari Benakole <i@kb.life>
 
-.site-footer
-    display: grid
-    grid-gap: $space-sm
-    align-items: flex-end
-    @media #{ $xlargeup}
-        grid-template-columns: repeat(2, 1fr)
-    svg
-        max-width: 140px
-        margin-right: 10px
-        &:last-of-type
-            margin-right: 0
-    .get-app
-        display: flex
-        justify-content: flex-end
-    .cta
-        font-size: 2rem
+.site-footer-largeup
+    display:            none
+    @media #{ $largeup }
+        display:        block
+    @media #{ $xlargeup }
+        display:        flex
+        align-items: center
+        

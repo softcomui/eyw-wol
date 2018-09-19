@@ -7,22 +7,17 @@
 .is-main
     display: grid
     height:  100%
-    grid-gap: $space-lg
+    grid-gap: $space-xl
     @media #{ $largeup}
-        grid-column: 1 / 3
-        grid-template-columns: repeat(3, 1fr)
+        grid-template-columns: repeat(2, 1fr)
     .is-main-content
         @media #{ $xsmallup}
             max-width: $maxwidth-sm
             margin: 0 auto
-        @media #{ $xlargeup}
-            max-width: 100%
 .testimonies
-    @media #{ $largeup}
-        grid-column: 2 / 4
     .is-testimonies
-        -webkit-columns: 250px
-        -moz-columns: 250px
+        -webkit-columns: 200px
+        -moz-columns: 200px
         li
             border: 1px solid $primarycolor
             box-shadow: $subtleboxshadow
@@ -42,6 +37,8 @@
     box-shadow: $subtleboxshadow
     max-width: 350px
     font-size: 1.3rem
+
+
 
 twitterwidget
     margin: 0 !important

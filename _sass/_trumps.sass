@@ -5,6 +5,9 @@
     // @author  Kabolobari Benakole <i@kb.life>
     // @version 1.0.0
 
+
+.width-sm
+    width:              576px
 // Positioning
 .absolute-zero
     position:           absolute
@@ -190,8 +193,12 @@
 
 .p-1s
     padding:            0 1rem
-.pl-1
+.pl-h
     padding-right:      0.5rem
+.pl-1
+    padding-right:      1rem
+.pl-1h
+    padding-right:      1.5rem
 
 
 // Media Query Utilities
@@ -205,13 +212,13 @@
     @media #{ $mediumup }
         display:        block
 
-.show-slargeup
+.show-largeup
     display:            none
-    @media #{ $slargeup }
+    @media #{ $largeup }
         display:        block
-.hide-slargeup
-    display:            block
-    @media #{ $slargeup }
+.hide-largeup
+    display:            flex
+    @media #{ $largeup }
         display:        none
 
 .hide-smallup
