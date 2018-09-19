@@ -4,11 +4,36 @@
     // @package sfc
     // @author  Kabolobari Benakole <i@kb.life>
 
-.site-footer-largeup
-    display:            none
+.modal-footer
+    display: grid
+    grid-gap: $space-sm
+    align-items: flex-end
+    @media #{ $xlargeup}
+        grid-template-columns: repeat(2, 1fr)
+    svg
+        max-width: 140px
+        margin-right: 10px
+        &:last-of-type
+            margin-right: 0
+    .get-app
+        display: flex
+        justify-content: flex-end
+    .cta
+        font-size: 2rem
+
+
+.copyright-footer-largeup
+    display: none
+    position: absolute
+    width: 100%
     @media #{ $largeup }
-        display:        block
+        bottom: 20px
+        padding: .7rem 0
+        display: flex
+    @media #{ $slaptop }
+        bottom: 40px
     @media #{ $xlargeup }
+        bottom: 40px
         display:        flex
         align-items: center
-        
+        padding: 1rem 0

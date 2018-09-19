@@ -9,7 +9,7 @@ layout: default
         <li class="testimony-post">
             {{ item.testimony }}
             <div class="pt-2 nanotext">
-                <a href="{{ item.testimony-link }}" class="d-flx al-i-c">
+                <a href="{{ item.testimony-link }}" class="d-flx al-i-c" target="_blank">
                 {% if item.social-media == 'facebook' %}
                     {% include icons.html icon="facebook" %}
                 {% elsif item.social-media == 'instagram' %}

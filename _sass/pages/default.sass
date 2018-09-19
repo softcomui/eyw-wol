@@ -6,39 +6,42 @@
 
 .is-main
     display: grid
-    height:  100%
     grid-gap: $space-xl
+    max-height: 100vh
     @media #{ $largeup}
         grid-template-columns: repeat(2, 1fr)
     .is-main-content
+        max-height: 100vh
         @media #{ $xsmallup}
             max-width: $maxwidth-sm
             margin: 0 auto
-.testimonies
-    .is-testimonies
-        -webkit-columns: 200px
-        -moz-columns: 200px
-        li
-            border: 1px solid $primarycolor
-            box-shadow: $subtleboxshadow
-            margin: 0 5px 20px
-            padding: $space
-            -webkit-column-break-inside: avoid
-            break-inside: avoid
-            border-radius: $preferredradius
+
+
+.is-testimonies
+    -webkit-columns: 200px
+    -moz-columns: 200px
+    li
+        border: 1px solid $primarycolor
+        box-shadow: $subtleboxshadow
+        margin: 0 5px 20px
+        padding: $space
+        -webkit-column-break-inside: avoid
+        break-inside: avoid
+        border-radius: $preferredradius
+
+
 .content-area
-    padding: 5rem 0
+    padding: 3rem 0
     .svg-animation svg
         max-width: 90%
         text-align: left
+
 .is-about-eyw
     padding: .4rem 1.5rem
     border-radius: 30px
     box-shadow: $subtleboxshadow
     max-width: 350px
     font-size: 1.3rem
-
-
 
 twitterwidget
     margin: 0 !important

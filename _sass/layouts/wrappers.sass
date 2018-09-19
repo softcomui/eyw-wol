@@ -7,7 +7,10 @@
 .wrapper
     padding:                    $space-sm
     &.will-grow
-        @media #{ $mediumup }
+        @media #{ $smallup }
+            padding-top:        $space-sm
+            padding-bottom:     $space-sm
+        @media #{ $slaptop }
             padding-top:        $space-md
             padding-bottom:     $space-md
     &.negate-top
@@ -51,6 +54,7 @@
 
 .section-with-overflow
     @media #{ $largeup}
-        height: 100vh
+        height: 100%
         overflow-y: auto
-        overflow-x: auto
+    &::-webkit-scrollbar
+        display: none
