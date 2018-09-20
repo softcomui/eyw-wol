@@ -7,14 +7,13 @@
 .is-main
     display: grid
     grid-gap: $space-xl
-    max-height: 100vh
     @media #{ $largeup}
         grid-template-columns: repeat(2, 1fr)
     .is-main-content
-        max-height: 100vh
         @media #{ $xsmallup}
             max-width: $maxwidth-sm
             margin: 0 auto
+            
 
 
 .is-testimonies
@@ -31,7 +30,9 @@
 
 
 .content-area
-    padding: 3rem 0
+    padding: 1rem 0
+    @media #{ $xlargeup }
+        padding: 1.5rem 0
     .svg-animation svg
         max-width: 90%
         text-align: left

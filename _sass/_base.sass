@@ -15,10 +15,9 @@ body
     font-family:            $bodyfont
     font-weight:            $normal
     line-height:            $defaultlh
-    display:                flex
-    flex-direction:         column
-    height:                 100vh
-    overflow:               hidden
+    @media #{ $largeup}
+        height:                 100vh
+        overflow-y:             hidden
     main
         flex:               1
 
