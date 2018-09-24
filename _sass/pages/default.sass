@@ -6,36 +6,41 @@
 
 .is-main
     display: grid
-    grid-gap: $space-xl
+    grid-gap: $space-sm
     @media #{ $largeup}
         grid-template-columns: repeat(2, 1fr)
-    .is-main-content
-        @media #{ $xsmallup}
-            max-width: $maxwidth-sm
-            margin: 0 auto
+        height: 100vh
             
+.is-main-content
+    @media #{ $largeup}
+        justify-self: end
+    .content-area
+        max-width:  $maxwidth-sm
+        margin: 0 auto
+        @media #{ $largeup}
+            width: $maxwidth-sm
+            height: 100%
+    .headline, .copy
+        @media #{ $largeup}
+            max-width: 500px
 
 
-.is-testimonies
-    -webkit-columns: 200px
-    -moz-columns: 200px
-    li
-        border: 1px solid $primarycolor
-        box-shadow: $subtleboxshadow
-        margin: 0 5px 20px
-        padding: $space
-        -webkit-column-break-inside: avoid
-        break-inside: avoid
-        border-radius: $preferredradius
-
-
-.content-area
-    padding: 1rem 0
-    @media #{ $xlargeup }
-        padding: 1.5rem 0
-    .svg-animation svg
-        max-width: 90%
-        text-align: left
+.is-testimonies 
+    .is-testimonies-wrapper
+        -webkit-columns: 220px
+        -moz-columns: 220px
+        max-width:  $maxwidth-sm
+        margin: 0 auto
+        @media #{ $largeup}
+            margin: 0
+        .is-testimony
+            border: 1px solid $primarycolor
+            box-shadow: $subtleboxshadow
+            margin: 0 .3rem $space-sm
+            padding: $space-sm
+            -webkit-column-break-inside: avoid
+            break-inside: avoid
+            border-radius: $preferredradius
 
 .is-about-eyw
     padding: .4rem 1.5rem
@@ -44,5 +49,39 @@
     max-width: 350px
     font-size: 1.3rem
 
-twitterwidget
-    margin: 0 !important
+.cloud-animation
+    position: relative
+    -ms-flex: 0 0 auto
+    height: 250px
+    max-height: 250px
+
+    @keyframes float
+        0%
+            transform: translateY(8px) rotate3d(0,0,1,3deg)
+        100%
+            transform: translateY(-8px) rotate3d(0,0,1,0deg)
+            
+    li
+        position: absolute
+        transform-origin: 0 0
+        will-change: transform
+        animation: float 4s alternate infinite ease-in-out
+        &:nth-child(1)
+            top: 0
+            left: 0%
+        &:nth-child(2)
+            top: -4.90909%
+            left: 45.83333%
+            animation-delay: -1.8s
+        &:nth-child(3)
+            top: 15.72727%
+            left: 60.66667%
+            animation-delay: -2.2s
+        &:nth-child(4)
+            top: 40.63636%
+            left: 54.83333%
+            animation-delay: -3.4s
+        &:nth-child(5)
+            top: 30.63636%
+            left: 31.16667%
+            animation-delay: -2.4s

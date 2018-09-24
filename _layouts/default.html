@@ -8,43 +8,58 @@
         <h1 class="sr">
             {{ site.title }}
         </h1>
-        <main class="is-main wrapper will-grow negate-bottom maxwidth-xl mx-auto">
-            <section class="is-main-content pos-rel">
-                <a href="{{ site.title }}">
-                    {% include icons.html icon="logo" %}
-                </a>
-                <div class="content-area">
-                    <div class="py-1 svg-animation">
-                        {% include icons.html icon="love-group" %}
+        <main class="is-main">
+            <section class="wrapper will-grow negate-bottom is-main-content">
+                <div class="content-area pos-rel">
+                    <div class="pt-2">
+                        <figure class="cloud-animation">
+                            <ul class="none m-0">
+                                <li>
+                                    <img alt="Perl" src="/uploads/love_1.svg" class="has-loaded">
+                                </li>
+                                <li>
+                                    <img alt="Perl" src="/uploads/love_2.svg" class="has-loaded">
+                                </li>
+                                <li>
+                                    <img alt="Perl" src="/uploads/love_3.svg" class="has-loaded">
+                                </li>
+                                <li>
+                                    <img alt="Perl" src="/uploads/love_4.svg" class="has-loaded">
+                                </li>
+                                <li>
+                                    <img alt="Perl" src="/uploads/love_5.svg" class="has-loaded">
+                                </li>
+                            </ul>
+                        </figure>
+                        <h1 class="mb-1 headline">We’re not ones to brag, but as it turns out, people love <span class="co-primary">eyowo</span></h1>
+                        <p class="mb-2 nanotext copy">Providing an easier way for people to send and receive money with just their phone number has been a great honour. Here are some of the glowing things people have said about eyowo.</p>
                     </div>
-                    <h1 class="mb-1 maxwidth-500">We’re not ones to brag, but as it turns out, people love <span class="co-primary">eyowo</span></h1>
-                    <p class="nanotext mb-1">Providing an easier way for people to send and receive money with just their phone number has been a great honour. Here are some of the glowing things people have said about eyowo.</p>
-                </div>
-                <div>
-                    <p class="nanotext mb-h ml-1h">Got here by chance?</p>
-                    <a class="d-flx al-i-c is-about-eyw bg-white co-rich-black" href="#about-eyw" uk-toggle>
-                        <span>{% include icons.html icon="logo-alt" %}</span>
-                        What is eyowo?
-                    </a>
-                </div>
-
-                <footer class="al-i-c border-top copyright-footer-largeup">
-                    <p class="picotext co-faint-gray pl-1h">Eyowo 2018. All Rights Reserved.</p>
                     <div>
-                        <a href="{{ site.title }}" class="pl-1">
-                            {% include icons.html icon="footer-twitter" %}
+                        <p class="mb-h ml-1h nanotext">Got here by chance?</p>
+                        <a class="d-flx al-i-c is-about-eyw bg-white co-rich-black" href="#about-eyw" uk-toggle>
+                            {% include icons.html icon="logo-alt" %}
+                            <span class="suffix">What is eyowo?</span>
                         </a>
-                        <a href="{{ site.title }}" class="pl-1">
-                            {% include icons.html icon="footer-facebook" %}
-                        </a>
-                        <a href="{{ site.title }}" class="pl-1">
-                            {% include icons.html icon="footer-instagram" %}
-                        </a>
-                        <a href="{{ site.title }}" class="pl-1">
-                            {% include icons.html icon="footer-youtube" %}
-                    </a>
                     </div>
-                </footer>
+
+                    <footer class="al-i-c border-top copyright-footer-largeup">
+                        <p class="picotext co-faint-gray pl-1">Eyowo 2018. All Rights Reserved.</p>
+                        <div class="d-flx al-i-c">
+                            <a href="{{ site.title }}" class="social-media-links">
+                                {% include icons.html icon="footer-twitter" %}
+                            </a>
+                            <a href="{{ site.title }}" class="social-media-links">
+                                {% include icons.html icon="footer-facebook" %}
+                            </a>
+                            <a href="{{ site.title }}" class="social-media-links">
+                                {% include icons.html icon="footer-instagram" %}
+                            </a>
+                            <a href="{{ site.title }}" class="social-media-links">
+                                {% include icons.html icon="footer-youtube" %}
+                        </a>
+                        </div>
+                    </footer>
+                </div>
             </section>
             {{ content }}
         </main>

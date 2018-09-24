@@ -2,13 +2,13 @@
 layout: default
 ---
 
-<section class="section-with-overflow p-0 is-main-content testimonies">
-    <ul class="none m-0 is-testimonies">
+<section class="section-with-overflow wrapper will-grow negate-bottom is-testimonies">
+    <ul class="none m-0 is-testimonies-wrapper">
     {% assign documents = paginator.posts | sort: 'date' | reverse %}
     {% for item in documents %}        
-        <li class="testimony-post">
+        <li class="nanotext is-testimony">
             {{ item.testimony }}
-            <div class="pt-2 nanotext">
+            <div class="nanotext pt-2">
                 <a href="{{ item.testimony-link }}" class="d-flx al-i-c" target="_blank">
                 {% if item.social-media == 'facebook' %}
                     {% include icons.html icon="facebook" %}
