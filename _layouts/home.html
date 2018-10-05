@@ -2,14 +2,23 @@
 layout: default
 ---
 
-<section class="section-with-overflow wrapper will-grow negate-bottom is-testimonies">
+<section class="section-with-overflow wrapper will-grow is-testimonies">
     <ul class="none m-0 is-testimonies-wrapper">
-    {% assign documents = paginator.posts | sort: 'date' | reverse %}
+    {% assign documents = site.documents | where: 'master', true | sort: 'date' | reverse %}
     {% for item in documents %}        
         <li class="nanotext is-testimony">
-            {{ item.testimony }}
-            <div class="nanotext pt-2">
-                <a href="{{ item.testimony-link }}" class="d-flx al-i-c" target="_blank">
+            <p
+            {% if item.social-media == 'facebook' %} class="testimony-content  borderline-facebook"
+            {% elsif item.social-media == 'instagram' %} class="testimony-content  borderline-instagram"
+            {% elsif item.social-media == 'twitter' %}class="testimony-content  borderline-twitter"
+            {% endif %}">
+                {{ item.testimony }}
+            </p>
+            <a href="{{ item.testimony-link }}" 
+            {% if item.social-media == 'facebook' %} class="testimony-link bg-facebook"
+            {% elsif item.social-media == 'instagram' %} class="testimony-link bg-instagram"
+            {% elsif item.social-media == 'twitter' %}class="testimony-link bg-twitter"
+            {% endif %} target="_blank">
                 {% if item.social-media == 'facebook' %}
                     {% include icons.html icon="facebook" %}
                 {% elsif item.social-media == 'instagram' %}
@@ -18,9 +27,8 @@ layout: default
                     {% include icons.html icon="twitter" %}
                 {% endif %}
 
-                <span class="co-faint-gray suffix">{{ item.name }}</span>
-                </a>
-            </div>
+                <span class="suffix is-wider">{{ item.name }}</span>
+            </a>
         </li>
     {% endfor %}
     </ul>

@@ -1,9 +1,9 @@
 # Site settings
 title:        "Eyowo: Wall of Love"
-url:          'https://softcom.ng'
+url:          'http://eyw-wol.surge.sh'
 charset:      'UTF-8'
 timezone:     Africa/Lagos
-typekit_id:   sbm5njs
+typekit_id:   lbi1rxk
 google_analytics_id: 'UA-122859875-1'
 
 # Build settings
@@ -43,12 +43,6 @@ include:
 # Gems
 plugins:
   - jekyll/tagging
-  - jekyll-paginate-v2
-
-pagination:
-  enabled: true
-  per_page: 10
-  paginate_path: "/page:num/"
 
 # Handling Sass
 sass:

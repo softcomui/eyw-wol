@@ -6,82 +6,153 @@
 
 .is-main
     display: grid
-    grid-gap: $space-sm
+    grid-gap: $space
     @media #{ $largeup}
         grid-template-columns: repeat(2, 1fr)
         height: 100vh
-            
 .is-main-content
-    @media #{ $largeup}
-        justify-self: end
-    .content-area
-        max-width:  $maxwidth-sm
+    display: grid
+    align-content: center
+    .is-main-content-wrapper
+        position: relative
+        max-width:  550px
         margin: 0 auto
+        width:  100%
         @media #{ $largeup}
-            width: $maxwidth-sm
-            height: 100%
-    .headline, .copy
+            padding-top: 12%
+            justify-self: end
+            margin: 0
+        .headline
+            padding: 0
+            margin: 0 .5rem
+            font-size: 1.8rem
+            line-height: 1.2
+            @media #{ $largeup}
+                width: 500px
+                font-size: 2rem
+                margin: 0
+.logo-bar
+    width:  100%
+    z-index: 2
+    @media #{ $largeup}
+        position: fixed
+        top: 0
+    .logo-bar-content
+        width:  100%
+        max-width: 550px
+        padding: 0 .2rem
         @media #{ $largeup}
-            max-width: 500px
-
-
-.is-testimonies 
+            max-width: 1160px
+            padding: 0
+        .logo
+            width: 130px
+.about-eyw
+    position: relative
+    z-index: 2
+    .about-eyw-icon
+        border-radius: 50%
+        box-shadow: $subtleboxshadow
+        padding: .55rem .9rem
+        margin: 0
+        @media #{ $largeup}
+            margin: 5px
+.is-testimonies
     .is-testimonies-wrapper
         -webkit-columns: 220px
-        -moz-columns: 220px
-        max-width:  $maxwidth-sm
+        -moz-columns: 220px  
+        max-width:  550px
         margin: 0 auto
         @media #{ $largeup}
             margin: 0
+            padding-top: 12%
         .is-testimony
-            border: 1px solid $primarycolor
             box-shadow: $subtleboxshadow
-            margin: 0 .3rem $space-sm
-            padding: $space-sm
+            margin: 0 .5rem 2rem
             -webkit-column-break-inside: avoid
             break-inside: avoid
-            border-radius: $preferredradius
-
-.is-about-eyw
-    padding: .4rem 1.5rem
-    border-radius: 30px
-    box-shadow: $subtleboxshadow
-    max-width: 350px
-    font-size: 1.3rem
-
+            border-radius: 10px
+            .testimony-content
+                padding: $space
+                padding-bottom: 1.8rem
+                border-bottom: none
+                border-top-left-radius: 8px
+                border-top-right-radius: 8px
+            .testimony-link
+                display: flex
+                align-items: center
+                font-size: $picofont
+                padding: $space $space-sm
+                color: #ffffff
+                border-bottom-left-radius: 8px
+                border-bottom-right-radius: 8px
 .cloud-animation
+    min-height: 300px
+    width: 320px
+    margin: 2rem auto 0
     position: relative
-    -ms-flex: 0 0 auto
-    height: 250px
-    max-height: 250px
-
+    @media #{ $largeup}
+        margin: 0
+        margin-bottom: 2rem
+        width: 450px
+        min-height: 270px
     @keyframes float
         0%
             transform: translateY(8px) rotate3d(0,0,1,3deg)
         100%
-            transform: translateY(-8px) rotate3d(0,0,1,0deg)
-            
+            transform: translateY(-8px) rotate3d(0,0,1,0deg)   
+    ul
+        @media #{ $largedown}
+            transform:          scale(.8)
+            position:           absolute
+            height:             100%
+            width:              100%
     li
         position: absolute
-        transform-origin: 0 0
-        will-change: transform
-        animation: float 4s alternate infinite ease-in-out
+        animation: float 2s alternate infinite ease-in-out
         &:nth-child(1)
             top: 0
             left: 0%
         &:nth-child(2)
-            top: -4.90909%
-            left: 45.83333%
+            top: -10%
+            left: 60%
             animation-delay: -1.8s
+            @media #{ $largeup}
+                top: -5%
+                left: 50%
         &:nth-child(3)
-            top: 15.72727%
-            left: 60.66667%
+            top: 20%
+            left: 80%
             animation-delay: -2.2s
+            @media #{ $largeup}
+                left: 75%
         &:nth-child(4)
-            top: 40.63636%
-            left: 54.83333%
+            top: 30%
+            left: 65%
             animation-delay: -3.4s
+            @media #{ $largeup}
+                top: 50%
+                left: 73%
         &:nth-child(5)
-            top: 30.63636%
-            left: 31.16667%
+            bottom: 5%
+            left: 40%
             animation-delay: -2.4s
+            @media #{ $largeup}
+                bottom: 0%
+                left: 40%
+.about-eyw-modal
+    display: grid
+    align-content: center
+    overflow: hidden
+    .about-eyw-content
+        margin-top: -150px
+    .uk-modal-close-full
+.arrow svg
+    display: none
+    @media #{ $largeup}
+        display: inline-block
+        animation: slide 1s ease-in-out infinite
+@keyframes slide
+    50%
+        transform: translate(10px, 0)
+  
+

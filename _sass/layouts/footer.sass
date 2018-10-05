@@ -5,21 +5,15 @@
     // @author  Kabolobari Benakole <i@kb.life>
 
 .modal-footer
-    display: grid
-    grid-gap: $space
-    align-items: flex-end
-    @media #{ $xlargeup}
-        grid-template-columns: repeat(2, 1fr)
-    svg
-        max-width: 140px
-        margin-right: 10px
-        &:last-of-type
-            margin-right: 0
     .get-app
         display: flex
         justify-content: flex-end
         svg
             width: 120px
+            max-width: 140px
+            margin-right: 10px
+            &:last-of-type
+                margin-right: 0
     .cta
         font-size: 2rem
 

@@ -1,34 +1,28 @@
 <section id="about-eyw" uk-modal>
-    <div class="uk-modal-dialog">
-        <button class="uk-modal-close-full uk-close-large" type="button" uk-close></button>
-        <div class="negate-bottom">
-            <div class="wrapper will-grow maxwidth-500 mx-auto">
-                <h1 class="fw-medium mediumtext mb-1h">What is <span class="co-primary">eyowo</span>?</h1>
-                <a href="{{ site.title }}" class="d-blk mb-h">
-                    {% include icons.html icon="logo" %}
-                </a>
-                <p class="nanotext mb-1">Eyowo is a digital solution that helps you achieve simple day-to-day financial transactions. With eyowo, you can transfer and receive money using just your phone number.</p>
-        
-                <p class="nanotext mb-2">You can also fund bank accounts, pay bills and request payments. Make cardless withdrawals from ATMs anywhere in Nigeria.</p>
-        
-                <a href="#" class="d-blk">
-                    Got a question?
-                </a>
-            </div>
-        
-            <footer class="absolute-bottom bg-gainsboro wrapper will-grow modal-footer">
-                <div>
-                    <h2 class="smalltext fw-medium m-0 co-primary mb-h">Experience eyowo</h2>
-                    <p>
-                        <span class="d-blk fw-bold co-rich-black cta">Dial <sup>*</sup>4255#</span>
-                        <span class="nanotext">Dial <sup>*</sup>4255<sup>*</sup>100# on your mobile device and follow the prompts.</span>
-                    </p>
-                </div>
-                <div class="get-app">
-                    {% include icons.html icon="google-play" %} 
-                    {% include icons.html icon="app-store" %} 
-                </div>
-            </footer>
+    <div class="uk-modal-dialog about-eyw-modal">
+            <button class="uk-modal-close-full">
+                {% include icons.html icon="close" %}
+            </button>
+        <div class="about-eyw-content wrapper will-grow maxwidth-sm pos-rel">
+            <h1 class="mb-1h">What is <span class="co-primary">eyowo</span>?</h1>
+            <p>Eyowo is a digital solution that helps you achieve simple day-to-day financial transactions. With eyowo, you can transfer and receive money using just your phone number. <a href="http://eyowo.com/" class="co-primary">Learn more</a> </p>
         </div>
+        
+        <footer class="bg-gainsboro modal-footer wrapper will-grow negate-bottom absolute-bottom">
+            <div class="absolute-right footer-vector">
+                {% include icons.html icon="footer-vector" %}
+            </div>
+            <div class="maxwidth-sm pb-1 z-depth-1 pos-rel">
+                <h2 class="smalltext m-0 co-primary mb-h">Enjoy eyowo!</h2>
+                <div class="d-flx j-c-sb flx-wrap">
+                    <p class="d-blk fw-bold co-rich-black cta"> Dial *4255#</p>
+                    <div class="get-app">
+                        {% include icons.html icon="google-play" %} 
+                        {% include icons.html icon="app-store" %} 
+                    </div>
+                </div>
+                <p class="picotext pt-2">Copyright © 2018 Softcom Ltd. All rights reserved.</p>
+            </div>
+        </footer>
     </div>
 </section>

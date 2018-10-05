@@ -5,7 +5,10 @@
     // @author  Kabolobari Benakole <i@kb.life>
 
 .wrapper
-    padding:                    $space-sm
+    padding:                    $space
+    @media #{ $smallup }
+        padding-left:           $space-sm
+        padding-right:          $space-sm
     &.will-grow
         @media #{ $smallup }
             padding-top:        $space-sm
